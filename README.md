@@ -4,7 +4,7 @@ XMPP OpenFire on Docker
 # How to use this image
 ## start a postgres instance
 ```bash
-docker run -d --name db -e POSTGRES_USER=openfire -e OPSTGRES_PASSWOR=secret postgres
+docker run -d --name db -e POSTGRES_USER=openfire -e POSTGRES_PASSWORD=secret postgres
 # create database
 docker run --rm -it --link db:db eszz/openfire /bin/bash
 psql -h db -U openfire -W -d openfire -f /usr/share/openfire/resources/database/openfire_postgresql.sql
