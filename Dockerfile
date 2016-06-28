@@ -13,7 +13,7 @@ ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
 RUN apt-get install -y wget postgresql \
-  && wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz -O /tmp/jdk-7u80-linux-x64.tar.gz
+  && wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz -O /tmp/jdk-7u80-linux-x64.tar.gz \
   && wget "http://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_${OPENFIRE_VERSION}.tar.gz" -O /tmp/openfire_${OPENFIRE_VERSION}.tar.gz \
   && cd /opt && tar zxf /tmp/openfire_4_0_2.tar.gz \
   && tar zxf /tmp/jdk-7u80-linux-x64.tar.gz \
