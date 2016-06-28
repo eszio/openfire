@@ -1,6 +1,8 @@
 #!/bin/bash
-touch /var/log/openfire/all.log
-chown openfire:openfire /var/log/openfire/all.log
-service openfire start
-tail -f /var/log/openfire/all.log
+export JAVA_HOME=/opt/java
+export PATH=$JAVA_HOME/bin:$PATH
+
+touch /opt/openfire/logs/all.log
+/opt/openfire/bin/openfire start
+tail -f /opt/openfire/logs/all.log
 
